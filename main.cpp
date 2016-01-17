@@ -99,7 +99,9 @@ int main(int argc, char* argv[]){
   }
 
   //Now we grab the target file path, if the user specified one
-  pathStr = argv[1];  //Will be the second argument
+
+  if(argc >= 2)
+    pathStr = argv[1];  //Will be the second argument
   if(access(pathStr.c_str(),F_OK) != -1){ //Verify path exists
     if(pathStr.substr(pathStr.find_last_of(".") + 1) == "bf" ||
        pathStr.substr(pathStr.find_last_of(".") + 1) == "b")
