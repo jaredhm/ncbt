@@ -1,6 +1,6 @@
 # ncbt
 
-Brainfuck is a Turing-complete (http://www.iwriteiam.nl/Ha_bf_Turing.html) programming language created by Urban Muller without anyone really asking for it (I assume). It's a neat little language; what's more, it's thoroughly easy to compile or translate from BF. 
+Brainfuck is a Turing-complete (http://www.iwriteiam.nl/Ha_bf_Turing.html) programming language created by Urban Muller, and one that I'm assuming no one ever really asked for. It's a neat little language; what's more, it's thoroughly easy to compile or translate from BF. 
 
 Accordingly, <b>ncbt</b>, the *Needlessly Complex Brainfuck Compiler* has been written using modern compiler-generation tools (Flex and Bison) and an object-oriented approach in c++. 
 
