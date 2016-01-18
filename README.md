@@ -4,6 +4,6 @@ Brainfuck is a Turing-complete (http://www.iwriteiam.nl/Ha_bf_Turing.html) progr
 
 Accordingly, <b>ncbt</b>, the *Needlessly Complex Brainfuck Compiler* has been written using modern compiler-generation tools (Flex and Bison) and an object-oriented approach in c++. 
 
-*inb4* I could have implemented such a translator/compiler with significantly less code, in less time, more efficiently. Remember, it's the <b>ncbt</b>, not the *Multi-threaded Hundred-kilobyte LLVM One-up That Finds New Primes And Also Happend To Be A Brainfuck Translater*. The, err, <b>mhlofnphbt</b>, or something equivalent.
+*inb4* I could have implemented such a translator/compiler with significantly less code, in less time, more efficiently. Remember, it's the <b>ncbt</b>, not the *Multi-threaded Hundred-byte LLVM One-up That Finds New Primes And Also Happend To Be A Brainfuck Translater*. The, err, <b>mhlofnphbt</b>, or something equivalent.
 
 Enjoy!
