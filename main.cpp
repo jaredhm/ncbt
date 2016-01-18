@@ -86,7 +86,7 @@ int main(int argc, char* argv[]){
     gc = new CGenComponent(new std::stringstream(),cells);
   else{
     if(targetLang.compare("java") == 0){
-      //TODO : gc = new JavaGenComponent(new std::stringstream(),cells);
+      gc = new JavaGenComponent(new std::stringstream(),cells);
     }
     else if (targetLang.compare("c") == 0) {
       gc = new CGenComponent(new std::stringstream(),cells);

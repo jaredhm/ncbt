@@ -14,9 +14,9 @@ public:
   GenComponent(std::stringstream* ss,int c = 10000) : _ss(*ss), _cells(c) {}
   std::stringstream& getCodeAsStream() {return _ss;}
   std::string getExtension()  {return _ex;} //Handy way of having a generation component carry around the target file type
+  void EmitCode(class OpList n);
   virtual void Prologue() = 0;  //Methods output includes, method and class declarations and end brackets
   virtual void Epilogue() = 0;
-  virtual void EmitCode(class OpList n) = 0;
   virtual void EmitCode(class IncPtrOp n) = 0;
   virtual void EmitCode(class DecPtrOp n) = 0;
   virtual void EmitCode(class IncCellOp n) = 0;
@@ -31,9 +31,8 @@ class CGenComponent : public GenComponent{
   using GenComponent::getExtension;
 public:
   CGenComponent(std::stringstream* ss,int c) : GenComponent(ss,c) {_ex = ".c";}
-  void Epilogue();
   void Prologue();
-  void EmitCode(class OpList n);
+  void Epilogue();
   void EmitCode(class IncPtrOp n);
   void EmitCode(class DecPtrOp n);
   void EmitCode(class IncCellOp n);
@@ -45,9 +44,11 @@ public:
 
 class JavaGenComponent : public GenComponent{
   using GenComponent::getCodeAsStream;
+  using GenComponent::getExtension;
 public:
   JavaGenComponent(std::stringstream* ss, int c) : GenComponent(ss,c) {_ex = ".java";}
-  void EmitCode(class OpList n);
+  void Prologue();
+  void Epilogue();
   void EmitCode(class IncPtrOp n);
   void EmitCode(class DecPtrOp n);
   void EmitCode(class IncCellOp n);
